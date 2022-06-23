@@ -63,6 +63,7 @@ let concesionaria = {
   },
 
   totalDeVentas: function () {
+    if (!this.listaDeVentas() > 0) return 'No hay autos Vendidos aún'
     //Crea un Array con los precios de todos los autos vendidos.
     let ventas = this.listaDeVentas().map(arr => {
       let total = 0
